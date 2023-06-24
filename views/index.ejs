@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeechGPT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<div class="chatwindow">
+  <div class="api">Run it on Chrome Browser. Click on Speak icon > Speak > Click on Speak icon to stop recording > Click on Go > Get the Results</div>
+</div>  
+<div class="chatwindow">
+
+<div id="ansapi" class="api"><%= gptanswer %></div>
+
+<div class="user"></div>
+</div>
+
+  <form method="post" action="/">
+    <div class="options">
+      <input value="" class="output" placeholder="Search Here" type="search" name="query" id="" required>
+      
+
+<div class="buttonopot">
+    <button onclick="removeoldtext" id="go" type="submit">GO</button>
+   <div  onclick="startrec()" class="speechh"><img id="SPEECH" height="40px" src="/css/recognition.png" alt=""></div>
+    
+</div>
+    </div>
+  </form>
+
+<script src="/css/script.js"></script>
+
+
+</body>
+</html>
