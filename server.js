@@ -9,7 +9,7 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({extended:true}));
 var jsonParser = bodyParser.json()
-app.set('views', './views');
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs')
 
 
