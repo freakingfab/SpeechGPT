@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 
 require('dotenv').config()
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({extended:true}));
 var jsonParser = bodyParser.json()
