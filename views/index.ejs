@@ -31,7 +31,22 @@
 </div>
     </div>
   </form>
+  <script>
+    if ('speechSynthesis' in window) {
+      const speech = new SpeechSynthesisUtterance();
+      
+      speech.text = '<%= JSON.stringify(gptanswer) %>'; 
+      // console.log(speech.text);
+      speech.voice = speechSynthesis.getVoices().find(voice => voice.lang === 'en-US');
 
+      speech.pitch = 1; 
+      speech.rate = 1; 
+
+      speechSynthesis.speak(speech);
+    } else {
+      console.log('Web Speech API is not supported in this browser.');
+    }
+  </script>
 <script src="/css/script.js"></script>
 
 
